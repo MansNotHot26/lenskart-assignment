@@ -13,7 +13,7 @@ function Todolist({todoList,completed}) {
             {todoList.length > 0 && todoList.map(list => 
                <div key={Math.random()} className="todolist">
             
-               <input type="checkbox" onChange={() =>onChangeHandler(list)}/>
+               <input checked={list.done} type="checkbox" onChange={() =>onChangeHandler(list)}/>
                 <li className={list.done && 'completed'}>{list.val}</li>
             
                 </div>
